@@ -1,0 +1,75 @@
+.cardLink {
+  color: inherit;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 238px;
+  border-radius: 20px;
+  background: var(--md-surface-container-low);
+  border: 1px solid var(--md-outline-variant);
+  color: var(--md-on-surface);
+  padding: 16px;
+  box-shadow:
+    0px 1px 3px 0px var(--md-primary),
+    0px 1px 2px 0px var(--md-primary);
+
+  transition:
+    box-shadow 0.2s ease-in-out,
+    border-color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
+
+  &:hover {
+    border-color: var(--md-primary);
+    background: white;
+  }
+}
+
+.iconsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px 0 16px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px 0 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background-color: var(--md-primary);
+}
+
+.textInfoContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0 18px;
+  gap: 10px;
+}
+
+.description {
+  color: var(--md-on-surface-variant);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--md-outline-variant);
+  color: var(--md-primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.button svg {
+  width: 18px;
+}

@@ -1,68 +1,51 @@
+import { Card } from "@/components/Card/Card";
+import s from "./page.module.scss";
+import Illustration from "./(ui)/(image)/illustration.png";
 import Image from "next/image";
-import styles from "./page.module.css";
+import { INFO_CARDS } from "@/shared/data/info-cards-data";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className={s.page}>
+      <main className={s.main}>
+        <section className={s.bannerContainer}>
+          <div className={s.bannerCopy}>
+            <span className={s.eyebrow}>FILE WORKSPACE</span>
+            <h1>Simple tools for your files</h1>
+            <p>Convert, extract and transform PDF and image files online.</p>
+            <a className={s.primaryAction} href="#tools">
+              Explore tools
+            </a>
+          </div>
+          <div className={s.illustrationFrame}>
             <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+              className={s.imageBanner}
+              src={Illustration}
+              alt="Illustration"
             />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          </div>
+        </section>
+        <section className={s.toolsSection} id="tools">
+          <div className={s.sectionHeading}>
+            <div>
+              <span className={s.eyebrow}>YOUR TOOLKIT</span>
+              <h2>What would you like to make?</h2>
+            </div>
+            <p>Five focused tools. No clutter.</p>
+          </div>
+          <div className={s.intro}>
+            {INFO_CARDS.map((info, index) => (
+              <Card
+                description={info.description}
+                imageOne={info.imageOne}
+                imageTwo={info.imageTwo}
+                link={info.link}
+                name={info.name}
+                key={index}
+              />
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   );
