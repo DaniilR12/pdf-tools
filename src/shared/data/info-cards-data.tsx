@@ -11,13 +11,6 @@ export type InfoCard = {
 
 export const INFO_CARDS: InfoCard[] = [
   {
-    link: "/pdf-to-word",
-    imageOne: <PdfIcon />,
-    imageTwo: <DocxIcon />,
-    name: "PDF to Word",
-    description: "Convert PDF documents to editable Word files.",
-  },
-  {
     link: "/pdf-to-jpg",
     imageOne: <PdfIcon />,
     imageTwo: <DocxIcon />,
