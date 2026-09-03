@@ -15,8 +15,40 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Filewise | Simple tools for your files",
-  description: "Convert, extract and transform PDF and image files online.",
+  icons: {
+    icon: "/favicon.png",
+  },
+  metadataBase: new URL("https://filezeno.vercel.app"),
+  title: {
+    default: "Filezeno | Online PDF and Image Tools",
+    template: "%s | Filezeno",
+  },
+  description:
+    "Convert, merge, split, compress and protect PDF files online. Extract text from PDFs and images with free browser-based tools.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Filezeno | Online PDF and Image Tools",
+    description:
+      "Convert, merge, split, compress and protect PDF files online with simple browser-based tools.",
+    url: "https://filezeno.vercel.app",
+    siteName: "Filezeno",
+    images: [
+      {
+        url: "/og/openGraph.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Filezeno file tools",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Filezeno | Online PDF and Image Tools",
+    description: "Simple browser-based tools for PDF and image files.",
+    images: ["/og/openGraph.jpg"],
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
