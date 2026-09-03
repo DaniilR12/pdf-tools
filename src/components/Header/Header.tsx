@@ -7,9 +7,9 @@ export const Header = () => {
   return (
     <header className={s.header}>
       <div className={s.headerContainer}>
-        <Link href="/" className={s.logo} aria-label="Filewise home">
+        <Link href="/" className={s.logo} aria-label="Filezeno home">
           <span className={s.logoMark}>F</span>
-          <span>filewise</span>
+          <span>Filezeno</span>
         </Link>
         <nav className={s.nav} aria-label="Main navigation">
           <DropDown data={INFO_CARDS} />
