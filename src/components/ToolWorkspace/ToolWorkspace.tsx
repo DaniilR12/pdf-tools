@@ -149,7 +149,7 @@ export const ToolWorkspace = ({
         className={`${s.workspace} ${accent === "coral" ? s.coral : ""}`}
       >
         <div className={s.heading}>
-          <span className={s.kicker}>FILEWISE TOOL</span>
+          <span className={s.kicker}>FILEZENO TOOL</span>
 
           <h1>{title}</h1>
 
