@@ -21,7 +21,7 @@ export default function Home() {
             <Image
               className={s.imageBanner}
               src={Illustration}
-              alt="Illustration"
+              alt="Filezeno PDF and image file tools"
             />
           </div>
         </section>
@@ -45,6 +45,11 @@ export default function Home() {
               />
             ))}
           </div>
+          <p className={s.seoIntro}>
+            Filezeno provides free online tools for common PDF and image tasks.
+            Convert files, extract text, merge documents, reduce PDF size, and
+            protect your files directly in a modern browser.
+          </p>
         </section>
       </main>
     </div>
