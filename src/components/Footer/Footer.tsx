@@ -6,10 +6,10 @@ export const Footer = () => {
     <footer className={s.footer} id="about">
       <div className={s.footerInner}>
         <Link href="/" className={s.logo}>
-          filewise
+          filezeno
         </Link>
         <p>Small tools for everyday file work.</p>
-        <span>© 2026 Filewise</span>
+        <span>© 2026 Filezeno</span>
       </div>
     </footer>
   );
